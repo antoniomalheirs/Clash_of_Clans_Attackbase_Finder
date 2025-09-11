@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id button
+id button2
+id main
+id surface
+id textview
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Open_Clans
+style Theme.Open_Clans
+xml accessibility_service_config
+xml backup_rules
+xml data_extraction_rules
