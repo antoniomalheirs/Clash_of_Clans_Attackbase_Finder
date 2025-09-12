@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:2:1-50:12
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\f41eb4eda382d5a7c5d33fc21a33061e\transformed\material-1.13.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\Microsoft\.gradle\caches\8.13\transforms\2c3980841f93f58c1fea581e7a8fdbcc\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\Microsoft\.gradle\caches\8.13\transforms\668bd69e88468c6dc3f93368d3e7cc3c\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:2:1-7:12
@@ -77,9 +77,13 @@ uses-permission#android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
 ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:5:5-94
 	android:name
 		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:5:22-91
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:6:5-77
+	android:name
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:6:22-75
 application
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:7:5-44:19
-INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:7:5-44:19
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:9:5-48:19
+INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:9:5-48:19
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\f41eb4eda382d5a7c5d33fc21a33061e\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\f41eb4eda382d5a7c5d33fc21a33061e\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\Microsoft\.gradle\caches\8.13\transforms\2c3980841f93f58c1fea581e7a8fdbcc\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -119,65 +123,67 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\Microsoft\.grad
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:14:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:12:9-54
 	android:roundIcon
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:15:9-48
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:17:9-48
 	android:dataExtractionRules
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:9:9-65
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:11:9-65
 activity#com.debug.open_clans.MainActivity
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:16:9-24:20
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:18:9-26:20
 	android:exported
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:18:13-36
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:17:13-41
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:24:27-74
 service#com.debug.open_clans.MyMediaProjectionService
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:26:9-29:19
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:28:9-31:19
 	android:foregroundServiceType
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:28:13-60
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:30:13-60
 	android:name
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:27:13-53
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:29:13-53
 service#com.debug.open_clans.TouchService
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:30:9-41:19
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:32:9-44:19
+	android:enabled
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:35:13-35
 	android:label
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:34:13-42
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:37:13-42
 	android:exported
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:33:13-37
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:36:13-36
 	android:permission
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:32:13-79
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:34:13-79
 	android:name
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:31:13-41
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:33:13-41
 intent-filter#action:name:android.accessibilityservice.AccessibilityService
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:35:13-37:29
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:38:13-40:29
 action#android.accessibilityservice.AccessibilityService
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:36:17-92
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:39:17-92
 	android:name
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:36:25-89
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:39:25-89
 meta-data#android.accessibilityservice
-ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:38:13-40:72
+ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:41:13-43:72
 	android:resource
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:40:17-69
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:39:17-60
+		ADDED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:42:17-60
 uses-sdk
 INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml

@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <permission
         android:name="com.debug.open_clans.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -49,7 +50,8 @@
         </service>
         <service
             android:name="com.debug.open_clans.TouchService"
-            android:exported="false"
+            android:enabled="true"
+            android:exported="true"
             android:label="Touch Service"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
             <intent-filter>

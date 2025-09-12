@@ -58,8 +58,9 @@ public class MyMediaProjectionService extends Service {
         broadcastIntent.setAction(ACTION_MEDIA_PROJECTION_STARTED);
         broadcastIntent.putExtra("resultCode", resultCode);
         broadcastIntent.putExtra("data", data);
-
         LocalBroadcastManager.getInstance(this).sendBroadcast(broadcastIntent);
+
+        LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("CAPTURE_STARTED"));
 
         return START_STICKY;
     }

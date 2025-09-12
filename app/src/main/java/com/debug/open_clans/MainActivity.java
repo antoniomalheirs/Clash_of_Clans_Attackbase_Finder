@@ -19,6 +19,7 @@ import android.media.Image;
 import android.media.ImageReader;
 import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -45,6 +46,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 
+import android.provider.Settings;
+import android.text.TextUtils;
+import android.widget.Toast;
+
+
 public class MainActivity extends AppCompatActivity {
     public static final String ACTION_MEDIA_PROJECTION_STARTED = "com.debug.open_clans.ACTION_MEDIA_PROJECTION_STARTED";
     public static final String TAG = "MediaProjectionSample";
@@ -59,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     private Surface mSurface;
     private Handler mHandler;
     private ImageReader mImageReader;
+    private ContentObserver accessibilityObserver;
     private ActivityResultLauncher<Intent> startMediaProjectionActivity;
     // OCR
     private final com.google.mlkit.vision.text.TextRecognizer recognizer =  TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
@@ -83,10 +90,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private final MyBroadcastReceiver receiver = new MyBroadcastReceiver();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (!isAccessibilityServiceEnabled(this, TouchService.class)) {
+            Toast.makeText(this, "Ative o Touch Service nas configurações de acessibilidade", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Touch Service já está ativo!", Toast.LENGTH_SHORT).show();
+        }
+
+
 
         mSurfaceView = findViewById(R.id.surface);
         mHandler = new Handler(Looper.getMainLooper());
@@ -99,18 +116,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onStart() {
         super.onStart();
-
-
-        boolean enabled = isAccessibilityServiceEnabled(this, TouchService.class);
-        if (!enabled) {
-            requestAccessibilityPermission();
-        }
-
-        registerAccessibilityObserver();
 
 
         mediaProjectionManager = (MediaProjectionManager)
@@ -152,32 +160,15 @@ public class MainActivity extends AppCompatActivity {
             LocalBroadcastManager.getInstance(this).registerReceiver(receiver, filter);
             isReceiverRegistered = true;
         }
+        if (!Settings.canDrawOverlays(this)) {
+            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package:" + getPackageName()));
+            startActivity(intent);
+        }
+
 
 
     }
-    private ContentObserver accessibilityObserver;
-    private void registerAccessibilityObserver() {
-        if (accessibilityObserver != null) return;
-
-        accessibilityObserver = new ContentObserver(new Handler(Looper.getMainLooper())) {
-            @Override
-            public void onChange(boolean selfChange) {
-                super.onChange(selfChange);
-                boolean enabled = isAccessibilityServiceEnabled(MainActivity.this, TouchService.class);
-                if (enabled) {
-                    Toast.makeText(MainActivity.this, "Serviço de acessibilidade ativado", Toast.LENGTH_SHORT).show();
-                    // opcional: continue fluxo que dependia da permissão
-                }
-            }
-        };
-
-        getContentResolver().registerContentObserver(
-                Settings.Secure.getUriFor(Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES),
-                false,
-                accessibilityObserver
-        );
-    }
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -191,10 +182,6 @@ public class MainActivity extends AppCompatActivity {
             mMediaProjection = null;
         }
 
-        if (accessibilityObserver != null) {
-            getContentResolver().unregisterContentObserver(accessibilityObserver);
-            accessibilityObserver = null;
-        }
     }
     private void requestScreenCapturePermission() {
         if (startMediaProjectionActivity != null) {
@@ -202,41 +189,45 @@ public class MainActivity extends AppCompatActivity {
             startMediaProjectionActivity.launch(captureIntent);
         }
     }
+    private boolean isAccessibilityServiceEnabled(Context context, Class<?> service) {
+        int accessibilityEnabled = 0;
+        final String serviceId = context.getPackageName() + "/" + service.getCanonicalName();
 
-    private void requestAccessibilityPermission() {
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-        boolean alreadyAsked = prefs.getBoolean("asked_accessibility", false);
-
-        if (!alreadyAsked) {
-            new AlertDialog.Builder(this)
-                    .setTitle("Ativar acessibilidade")
-                    .setMessage("Ative o serviço de acessibilidade para permitir que o app funcione corretamente.")
-                    .setPositiveButton("Ir para Configurações", (dialog, which) -> {
-                        prefs.edit().putBoolean("asked_accessibility", true).apply();
-                        Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
-                        startActivity(intent);
-                    })
-                    .setNegativeButton("Cancelar", null)
-                    .show();
+        try {
+            accessibilityEnabled = Settings.Secure.getInt(
+                    context.getApplicationContext().getContentResolver(),
+                    Settings.Secure.ACCESSIBILITY_ENABLED
+            );
+        } catch (Settings.SettingNotFoundException e) {
+            e.printStackTrace();
         }
-    }
 
-    public static boolean isAccessibilityServiceEnabled(Context context, Class<?> accessibilityServiceClass) {
-        String prefString = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES);
-        if (prefString == null) return false;
-        final ComponentName expectedComponent = new ComponentName(context, accessibilityServiceClass);
-        final String flat = expectedComponent.flattenToString();
-        for (String enabled : prefString.split(":")) {
-            if (enabled.equalsIgnoreCase(flat)) return true;
+        TextUtils.SimpleStringSplitter colonSplitter = new TextUtils.SimpleStringSplitter(':');
+
+        if (accessibilityEnabled == 1) {
+            String settingValue = Settings.Secure.getString(
+                    context.getApplicationContext().getContentResolver(),
+                    Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES
+            );
+
+            if (settingValue != null) {
+                colonSplitter.setString(settingValue);
+                while (colonSplitter.hasNext()) {
+                    String enabledService = colonSplitter.next();
+                    if (enabledService.equalsIgnoreCase(serviceId)) {
+                        return true;
+                    }
+                }
+            }
         }
         return false;
     }
-    @SuppressLint("SetTextI18n")
     public void startScreenCapture() {
         if (mSurfaceView.getHolder().getSurface() == null || !mSurfaceView.getHolder().getSurface().isValid()) {
             mSurfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
                 @Override
                 public void surfaceCreated(SurfaceHolder holder) {
+
                     mSurface = holder.getSurface();
                     startScreenCapture();
                 }
@@ -251,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
             });
             return;
         }
+
 
         mSurface = mSurfaceView.getHolder().getSurface();
         mMediaProjection.registerCallback(new MediaProjection.Callback() {}, null);
@@ -285,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
                 null,
                 mHandler
         );
+        LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("CAPTURE_STARTED"));
 
         mButtonToggle.setText("Stop");
     }
@@ -310,7 +303,6 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG1, String.valueOf(valor));
                         }
 
-// Inversão da lógica: só clicamos se as condições **não** forem atendidas
                         if (!(countMillion >= 2 && countTenThousand >= 1)) {
                             Log.d(TAG1, "Condições não atendidas. Executando toque.");
                             Intent intent = new Intent("PERFORM_TAP");
@@ -361,7 +353,6 @@ public class MainActivity extends AppCompatActivity {
             return -1;
         }
     }
-
     private Bitmap imageToBitmapCrop(Image image, int cropWidth, int cropHeight) {
         if (image.getFormat() != PixelFormat.RGBA_8888) {
             throw new IllegalArgumentException("Formato inesperado: " + image.getFormat());
@@ -386,12 +377,16 @@ public class MainActivity extends AppCompatActivity {
 
         return Bitmap.createBitmap(fullBitmap, 0, 125, width, height);
     }
-
-    @SuppressLint("SetTextI18n")
     private void stopScreenCapture() {
         if (mVirtualDisplay == null) return;
+
         mVirtualDisplay.release();
         mVirtualDisplay = null;
         mButtonToggle.setText("Start");
+
+        // 🔹 Envia broadcast para avisar que a captura parou
+        LocalBroadcastManager.getInstance(this)
+                .sendBroadcast(new Intent("CAPTURE_STOPPED"));
     }
+
 }
