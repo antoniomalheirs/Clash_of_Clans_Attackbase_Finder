@@ -9,257 +9,269 @@
 9        android:targetSdkVersion="36" />
 10
 11    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-11-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:4:5-77
-11-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:4:22-74
+11-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:4:5-77
+11-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:4:22-74
 12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
-12-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:5:5-94
-12-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:5:22-91
+12-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:5:5-94
+12-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:5:22-91
 13    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-13-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:6:5-77
-13-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:6:22-75
+13-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:6:5-77
+13-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:6:22-75
 14
 15    <permission
-15-->[androidx.core:core:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+15-->[androidx.core:core:1.13.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
 16        android:name="com.debug.open_clans.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-16-->[androidx.core:core:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+16-->[androidx.core:core:1.13.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
 17        android:protectionLevel="signature" />
-17-->[androidx.core:core:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+17-->[androidx.core:core:1.13.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
 18
 19    <uses-permission android:name="com.debug.open_clans.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-19-->[androidx.core:core:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-19-->[androidx.core:core:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+19-->[androidx.core:core:1.13.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.13.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
 20    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-21-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
-21-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
+21-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
+21-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
 22    <uses-permission android:name="android.permission.INTERNET" />
-22-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:26:5-67
-22-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:26:22-64
+22-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:26:5-67
+22-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:26:22-64
 23
 24    <application
-24-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:9:5-48:19
+24-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:9:5-48:19
 25        android:allowBackup="true"
-25-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:10:9-35
+25-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:10:9-35
 26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.13.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+26-->[androidx.core:core:1.13.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d90159866532a614adb7911415716cc1\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 27        android:dataExtractionRules="@xml/data_extraction_rules"
-27-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:11:9-65
+27-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:11:9-65
 28        android:debuggable="true"
-29        android:extractNativeLibs="false"
+29        android:extractNativeLibs="true"
 30        android:fullBackupContent="@xml/backup_rules"
-30-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:12:9-54
+30-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:12:9-54
 31        android:icon="@mipmap/ic_launcher"
-31-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:13:9-43
+31-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:13:9-43
 32        android:label="@string/app_name"
-32-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:14:9-41
+32-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:14:9-41
 33        android:roundIcon="@mipmap/ic_launcher_round"
-33-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:15:9-54
+33-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:15:9-54
 34        android:supportsRtl="true"
-34-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:16:9-35
+34-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:16:9-35
 35        android:testOnly="true"
 36        android:theme="@style/Theme.Open_Clans" >
-36-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:17:9-48
+36-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:17:9-48
 37        <activity
-37-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:18:9-26:20
+37-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:18:9-26:20
 38            android:name="com.debug.open_clans.MainActivity"
-38-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:19:13-41
+38-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:19:13-41
 39            android:exported="true" >
-39-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:20:13-36
+39-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:20:13-36
 40            <intent-filter>
-40-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:21:13-25:29
+40-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:21:13-25:29
 41                <action android:name="android.intent.action.MAIN" />
-41-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:17-69
-41-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:25-66
+41-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:22:17-69
+41-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:22:25-66
 42
 43                <category android:name="android.intent.category.LAUNCHER" />
-43-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:24:17-77
-43-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:24:27-74
+43-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:24:17-77
+43-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:24:27-74
 44            </intent-filter>
 45        </activity>
 46
 47        <service
-47-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:28:9-31:19
+47-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:28:9-31:19
 48            android:name="com.debug.open_clans.MyMediaProjectionService"
-48-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:29:13-53
+48-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:29:13-53
 49            android:foregroundServiceType="mediaProjection" >
-49-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:30:13-60
+49-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:30:13-60
 50        </service>
 51        <service
-51-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:32:9-44:19
+51-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:32:9-44:19
 52            android:name="com.debug.open_clans.TouchService"
-52-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:33:13-41
+52-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:33:13-41
 53            android:enabled="true"
-53-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:35:13-35
+53-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:35:13-35
 54            android:exported="true"
-54-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:36:13-36
+54-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:36:13-36
 55            android:label="Touch Service"
-55-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:37:13-42
+55-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:37:13-42
 56            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
-56-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:34:13-79
+56-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:34:13-79
 57            <intent-filter>
-57-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:38:13-40:29
+57-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:38:13-40:29
 58                <action android:name="android.accessibilityservice.AccessibilityService" />
-58-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:39:17-92
-58-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:39:25-89
+58-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:39:17-92
+58-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:39:25-89
 59            </intent-filter>
 60
 61            <meta-data
-61-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:41:13-43:72
+61-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:41:13-43:72
 62                android:name="android.accessibilityservice"
-62-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:42:17-60
+62-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:42:17-60
 63                android:resource="@xml/accessibility_service_config" />
-63-->C:\Users\Microsoft\AndroidStudioProjects\app\src\main\AndroidManifest.xml:43:17-69
+63-->C:\Users\Zeca\Desktop\Git\Clash_of_Clans_Attackbase_Finder-main\app\src\main\AndroidManifest.xml:43:17-69
 64        </service>
 65        <service
-65-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b40bbdb079383b15b96400ee72235928\transformed\play-services-mlkit-text-recognition-common-19.0.0\AndroidManifest.xml:9:9-15:19
+65-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\df157c32a531be08f1cfe8cc38a98577\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:9:9-15:19
 66            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-66-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b40bbdb079383b15b96400ee72235928\transformed\play-services-mlkit-text-recognition-common-19.0.0\AndroidManifest.xml:10:13-91
+66-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\df157c32a531be08f1cfe8cc38a98577\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:10:13-91
 67            android:directBootAware="true"
-67-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:17:13-43
+67-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:17:13-43
 68            android:exported="false" >
-68-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b40bbdb079383b15b96400ee72235928\transformed\play-services-mlkit-text-recognition-common-19.0.0\AndroidManifest.xml:11:13-37
+68-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\df157c32a531be08f1cfe8cc38a98577\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:11:13-37
 69            <meta-data
-69-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b40bbdb079383b15b96400ee72235928\transformed\play-services-mlkit-text-recognition-common-19.0.0\AndroidManifest.xml:12:13-14:85
+69-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\df157c32a531be08f1cfe8cc38a98577\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:12:13-14:85
 70                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-70-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b40bbdb079383b15b96400ee72235928\transformed\play-services-mlkit-text-recognition-common-19.0.0\AndroidManifest.xml:13:17-114
+70-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\df157c32a531be08f1cfe8cc38a98577\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:13:17-114
 71                android:value="com.google.firebase.components.ComponentRegistrar" />
-71-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b40bbdb079383b15b96400ee72235928\transformed\play-services-mlkit-text-recognition-common-19.0.0\AndroidManifest.xml:14:17-82
+71-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\df157c32a531be08f1cfe8cc38a98577\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:14:17-82
 72            <meta-data
-72-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\0b7ccfb217ccd8b54c2e44d87a8d8a2b\transformed\vision-common-17.3.0\AndroidManifest.xml:12:13-14:85
+72-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\0b7ccfb217ccd8b54c2e44d87a8d8a2b\transformed\vision-common-17.3.0\AndroidManifest.xml:12:13-14:85
 73                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-73-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\0b7ccfb217ccd8b54c2e44d87a8d8a2b\transformed\vision-common-17.3.0\AndroidManifest.xml:13:17-124
+73-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\0b7ccfb217ccd8b54c2e44d87a8d8a2b\transformed\vision-common-17.3.0\AndroidManifest.xml:13:17-124
 74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\0b7ccfb217ccd8b54c2e44d87a8d8a2b\transformed\vision-common-17.3.0\AndroidManifest.xml:14:17-82
+74-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\0b7ccfb217ccd8b54c2e44d87a8d8a2b\transformed\vision-common-17.3.0\AndroidManifest.xml:14:17-82
 75            <meta-data
-75-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:20:13-22:85
+75-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:20:13-22:85
 76                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-76-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:21:17-120
+76-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:21:17-120
 77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:22:17-82
+77-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:22:17-82
 78        </service>
 79
 80        <provider
-80-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:9:9-13:38
+80-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:9:9-13:38
 81            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-81-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:10:13-78
+81-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:10:13-78
 82            android:authorities="com.debug.open_clans.mlkitinitprovider"
-82-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:11:13-69
+82-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:11:13-69
 83            android:exported="false"
-83-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:12:13-37
+83-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:12:13-37
 84            android:initOrder="99" />
-84-->[com.google.mlkit:common:18.8.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\7aef69cf67ae379f3acaf982e80e29ad\transformed\common-18.8.0\AndroidManifest.xml:13:13-35
+84-->[com.google.mlkit:common:18.11.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\f53b792bf0f6a13d66a6180c9f289939\transformed\common-18.11.0\AndroidManifest.xml:13:13-35
 85
 86        <activity
-86-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\66c087608f80b14f23d21f1227154e0f\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+86-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\c677334a79ffbddf15237e9a28fd934d\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
 87            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-87-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\66c087608f80b14f23d21f1227154e0f\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+87-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\c677334a79ffbddf15237e9a28fd934d\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
 88            android:exported="false"
-88-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\66c087608f80b14f23d21f1227154e0f\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+88-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\c677334a79ffbddf15237e9a28fd934d\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
 89            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-89-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\66c087608f80b14f23d21f1227154e0f\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+89-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\c677334a79ffbddf15237e9a28fd934d\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
 90
 91        <meta-data
-91-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\747dbfe6aa5c103757de9e8e50549faa\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+91-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d4ff3f1dfef54f849eff1e30cf9e5497\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
 92            android:name="com.google.android.gms.version"
-92-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\747dbfe6aa5c103757de9e8e50549faa\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+92-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d4ff3f1dfef54f849eff1e30cf9e5497\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
 93            android:value="@integer/google_play_services_version" />
-93-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\747dbfe6aa5c103757de9e8e50549faa\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-94
-95        <provider
-95-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-96            android:name="androidx.startup.InitializationProvider"
-96-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-97            android:authorities="com.debug.open_clans.androidx-startup"
-97-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-98            android:exported="false" >
-98-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-99            <meta-data
-99-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-100                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-100-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-101                android:value="androidx.startup" />
-101-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-102            <meta-data
-102-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Microsoft\.gradle\caches\8.13\transforms\c9910f90dbe22ce0fda85e87d5d69f9d\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-103                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-103-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Microsoft\.gradle\caches\8.13\transforms\c9910f90dbe22ce0fda85e87d5d69f9d\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-104                android:value="androidx.startup" />
-104-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Microsoft\.gradle\caches\8.13\transforms\c9910f90dbe22ce0fda85e87d5d69f9d\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-105            <meta-data
-105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-106                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-107                android:value="androidx.startup" />
-107-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-108        </provider>
-109
-110        <receiver
-110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-111            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
-112            android:directBootAware="false"
-112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
-113            android:enabled="true"
-113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
-114            android:exported="true"
-114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-115            android:permission="android.permission.DUMP" >
-115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
-116            <intent-filter>
-116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
-117                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
-118            </intent-filter>
-119            <intent-filter>
-119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
-120                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
-121            </intent-filter>
-122            <intent-filter>
-122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
-123                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-123-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-123-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
-124            </intent-filter>
-125            <intent-filter>
-125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
-126                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-126-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-126-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
-127            </intent-filter>
-128        </receiver>
-129
-130        <service
-130-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
-131            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-131-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
-132            android:exported="false" >
-132-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
-133            <meta-data
-133-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
-134                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-134-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
-135                android:value="cct" />
-135-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Microsoft\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
-136        </service>
-137        <service
-137-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
-138            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-138-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
-139            android:exported="false"
-139-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
-140            android:permission="android.permission.BIND_JOB_SERVICE" >
-140-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
-141        </service>
-142
-143        <receiver
-143-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
-144            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-144-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
-145            android:exported="false" />
-145-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Microsoft\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
-146    </application>
-147
-148</manifest>
+93-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\d4ff3f1dfef54f849eff1e30cf9e5497\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+94        <!--
+95        Service for holding metadata. Cannot be instantiated.
+96        Metadata will be merged from other manifests.
+97        -->
+98        <service
+98-->[androidx.camera:camera-core:1.4.2] C:\Users\Zeca\.gradle\caches\8.13\transforms\719580d94ab54352ad57594afb7df9f2\transformed\camera-core-1.4.2\AndroidManifest.xml:29:9-33:78
+99            android:name="androidx.camera.core.impl.MetadataHolderService"
+99-->[androidx.camera:camera-core:1.4.2] C:\Users\Zeca\.gradle\caches\8.13\transforms\719580d94ab54352ad57594afb7df9f2\transformed\camera-core-1.4.2\AndroidManifest.xml:30:13-75
+100            android:enabled="false"
+100-->[androidx.camera:camera-core:1.4.2] C:\Users\Zeca\.gradle\caches\8.13\transforms\719580d94ab54352ad57594afb7df9f2\transformed\camera-core-1.4.2\AndroidManifest.xml:31:13-36
+101            android:exported="false" />
+101-->[androidx.camera:camera-core:1.4.2] C:\Users\Zeca\.gradle\caches\8.13\transforms\719580d94ab54352ad57594afb7df9f2\transformed\camera-core-1.4.2\AndroidManifest.xml:32:13-37
+102
+103        <provider
+103-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+104            android:name="androidx.startup.InitializationProvider"
+104-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+105            android:authorities="com.debug.open_clans.androidx-startup"
+105-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+106            android:exported="false" >
+106-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+107            <meta-data
+107-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+108                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+108-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+109                android:value="androidx.startup" />
+109-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\fc2dfb31852b52ac8a8ef92e73445b69\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+110            <meta-data
+110-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Zeca\.gradle\caches\8.13\transforms\c9910f90dbe22ce0fda85e87d5d69f9d\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+111                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+111-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Zeca\.gradle\caches\8.13\transforms\c9910f90dbe22ce0fda85e87d5d69f9d\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+112                android:value="androidx.startup" />
+112-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Zeca\.gradle\caches\8.13\transforms\c9910f90dbe22ce0fda85e87d5d69f9d\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+113            <meta-data
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+114                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+115                android:value="androidx.startup" />
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+116        </provider>
+117
+118        <receiver
+118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+119            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+120            android:directBootAware="false"
+120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+121            android:enabled="true"
+121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+122            android:exported="true"
+122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+123            android:permission="android.permission.DUMP" >
+123-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+124            <intent-filter>
+124-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+125                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+126            </intent-filter>
+127            <intent-filter>
+127-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+128                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+128-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+128-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+129            </intent-filter>
+130            <intent-filter>
+130-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+131                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+131-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+131-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+132            </intent-filter>
+133            <intent-filter>
+133-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+134                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+134-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+134-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Zeca\.gradle\caches\8.13\transforms\b8ab0a774713daf4a46551fbaf782469\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+135            </intent-filter>
+136        </receiver>
+137
+138        <service
+138-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+139            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+139-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+140            android:exported="false" >
+140-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+141            <meta-data
+141-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+142                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+142-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+143                android:value="cct" />
+143-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Zeca\.gradle\caches\8.13\transforms\abe416ce7e931a28fa15fdb310c6dab9\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+144        </service>
+145        <service
+145-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Zeca\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+146            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+146-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Zeca\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+147            android:exported="false"
+147-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Zeca\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+148            android:permission="android.permission.BIND_JOB_SERVICE" >
+148-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Zeca\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+149        </service>
+150
+151        <receiver
+151-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Zeca\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+152            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+152-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Zeca\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+153            android:exported="false" />
+153-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Zeca\.gradle\caches\8.13\transforms\b191820415bc551a384d03d3183afbc9\transformed\transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+154    </application>
+155
+156</manifest>

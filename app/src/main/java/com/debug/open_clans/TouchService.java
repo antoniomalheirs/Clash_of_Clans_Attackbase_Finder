@@ -13,38 +13,55 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.view.accessibility.AccessibilityEvent;
+import android.widget.Button;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 public class TouchService extends AccessibilityService {
-    public static final String TAG1 = "VisualCapture";
 
-    private boolean paused = false;
+    private static final String TAG = "OpenClans.Touch";
+    private static final long MIN_TAP_INTERVAL_MS = 500;
 
+    private volatile boolean paused = false;
+    private volatile boolean matchPaused = false; // Pausado por MATCH (envia MATCH_RESUMED ao despausar)
+    private long lastTapTime = 0;
     private WindowManager windowManager;
     private View floatingButton;
+
+    // ─── BroadcastReceivers ───
 
     private final BroadcastReceiver tapReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if ("PERFORM_TAP".equals(intent.getAction())) {
-                float x = intent.getFloatExtra("x", 0f);
-                float y = intent.getFloatExtra("y", 0f);
-                if (paused) {
-                    Log.d(TAG1, "Ignorando toque porque está pausado.");
-                } else {
-                    Log.d(TAG1, "Executando toque em: " + x + ", " + y);
-                    performTap(x, y);
-                }
+            if (!"PERFORM_TAP".equals(intent.getAction()))
+                return;
+
+            float x = intent.getFloatExtra("x", 0f);
+            float y = intent.getFloatExtra("y", 0f);
+
+            if (paused) {
+                Log.d(TAG, "Toque ignorado — pausado.");
+                return;
             }
+
+            long now = System.currentTimeMillis();
+            if (now - lastTapTime < MIN_TAP_INTERVAL_MS) {
+                Log.d(TAG, "Toque ignorado — intervalo curto.");
+                return;
+            }
+            lastTapTime = now;
+
+            Log.d(TAG, "Toque em: (" + x + ", " + y + ")");
+            performTap(x, y);
         }
     };
+
     private final BroadcastReceiver captureReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.i(TAG1, "Recebido CAPTURE_STARTED → mostrando botão flutuante");
+            Log.i(TAG, "CAPTURE_STARTED → mostrando botão");
+            paused = false; // Resetar estado ao reiniciar captura
             showFloatingButton();
         }
     };
@@ -52,104 +69,132 @@ public class TouchService extends AccessibilityService {
     private final BroadcastReceiver captureStopReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.i(TAG1, "Recebido CAPTURE_STOPPED → removendo botão flutuante");
+            Log.i(TAG, "CAPTURE_STOPPED → removendo botão");
             removeFloatingButton();
         }
     };
 
+    private final BroadcastReceiver matchReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.i(TAG, "MATCH_FOUND → auto-pausando");
+            paused = true;
+            matchPaused = true;
+            if (floatingButton instanceof Button) {
+                ((Button) floatingButton).setText("▶ Resume");
+            }
+        }
+    };
+
+    // ═══════════════════════════════════════════════════════════════
+    // Lifecycle
+    // ═══════════════════════════════════════════════════════════════
+
     @Override
     public void onServiceConnected() {
         super.onServiceConnected();
-
-        // Registrar broadcast para taps
-        LocalBroadcastManager.getInstance(this)
-                .registerReceiver(tapReceiver, new IntentFilter("PERFORM_TAP"));
-
-        // Registrar broadcast para captura iniciada
-        LocalBroadcastManager.getInstance(this)
-                .registerReceiver(captureReceiver, new IntentFilter("CAPTURE_STARTED"));
-
-        LocalBroadcastManager.getInstance(this)
-                .registerReceiver(captureStopReceiver, new IntentFilter("CAPTURE_STOPPED"));
+        LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);
+        lbm.registerReceiver(tapReceiver, new IntentFilter("PERFORM_TAP"));
+        lbm.registerReceiver(captureReceiver, new IntentFilter("CAPTURE_STARTED"));
+        lbm.registerReceiver(captureStopReceiver, new IntentFilter("CAPTURE_STOPPED"));
+        lbm.registerReceiver(matchReceiver, new IntentFilter("MATCH_FOUND"));
+        Log.i(TAG, "TouchService conectado e pronto.");
     }
 
     @Override
     public void onDestroy() {
+        cleanup();
         super.onDestroy();
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(tapReceiver);
-
-        if (floatingButton != null && windowManager != null) {
-            windowManager.removeView(floatingButton);
-        }
-
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(captureReceiver);
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(captureStopReceiver);
-
-
     }
 
     @Override
-    public void onAccessibilityEvent(AccessibilityEvent event) {}
+    public void onAccessibilityEvent(AccessibilityEvent event) {
+        // Não processamos eventos de acessibilidade
+    }
 
     @Override
     public void onInterrupt() {
-        super.onDestroy();
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(tapReceiver);
-
-        if (floatingButton != null && windowManager != null) {
-            windowManager.removeView(floatingButton);
-        }
-
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(captureReceiver);
+        Log.w(TAG, "TouchService interrompido.");
     }
+
+    // ═══════════════════════════════════════════════════════════════
+    // Tap Gesture
+    // ═══════════════════════════════════════════════════════════════
 
     private void performTap(float x, float y) {
         Path path = new Path();
         path.moveTo(x, y);
 
-        GestureDescription.StrokeDescription stroke =
-                new GestureDescription.StrokeDescription(path, 0, 100);
+        GestureDescription gesture = new GestureDescription.Builder()
+                .addStroke(new GestureDescription.StrokeDescription(path, 0, 100))
+                .build();
 
-        GestureDescription.Builder builder = new GestureDescription.Builder();
-        builder.addStroke(stroke);
+        boolean dispatched = dispatchGesture(gesture, new GestureResultCallback() {
+            @Override
+            public void onCompleted(GestureDescription g) {
+                Log.d(TAG, "Toque OK.");
+            }
 
-        dispatchGesture(builder.build(), null, null);
+            @Override
+            public void onCancelled(GestureDescription g) {
+                Log.w(TAG, "Toque cancelado.");
+            }
+        }, null);
+
+        if (!dispatched) {
+            Log.e(TAG, "dispatchGesture retornou false! Serviço pode não ter permissão.");
+        }
     }
 
-    // --------- BOTÃO FLUTUANTE ----------
+    // ═══════════════════════════════════════════════════════════════
+    // Floating Button
+    // ═══════════════════════════════════════════════════════════════
+
     private void showFloatingButton() {
-        if (floatingButton != null) {
-            // Já existe, não recria
+        if (floatingButton != null)
             return;
-        }
 
         windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
+
+        int layoutType = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+                ? WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                : WindowManager.LayoutParams.TYPE_PHONE;
 
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
-                Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
-                        ? WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
-                        : WindowManager.LayoutParams.TYPE_PHONE,
+                layoutType,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
-                PixelFormat.TRANSLUCENT
-        );
+                PixelFormat.TRANSLUCENT);
 
         params.gravity = Gravity.TOP | Gravity.END;
         params.x = 50;
         params.y = 200;
 
         Button button = new Button(this);
-        button.setText("Pause");
-
+        button.setText("⏸ Pause");
         button.setOnClickListener(v -> {
             paused = !paused;
-            button.setText(paused ? "Resume" : "Pause");
-            Log.i(TAG1, "TouchService paused = " + paused);
+            button.setText(paused ? "▶ Resume" : "⏸ Pause");
+            Log.i(TAG, "Paused = " + paused);
+
+            // Se estava pausado por MATCH e o usuário clicou Resume → desbloquear match
+            if (!paused && matchPaused) {
+                matchPaused = false;
+                Log.i(TAG, "Match desbloqueado → enviando MATCH_RESUMED");
+                LocalBroadcastManager.getInstance(TouchService.this)
+                        .sendBroadcast(new Intent("MATCH_RESUMED"));
+            }
         });
 
         floatingButton = button;
-        windowManager.addView(floatingButton, params);
+
+        try {
+            windowManager.addView(floatingButton, params);
+        } catch (Exception e) {
+            Log.e(TAG, "Erro ao adicionar botão flutuante", e);
+            floatingButton = null;
+        }
     }
 
     private void removeFloatingButton() {
@@ -157,10 +202,28 @@ public class TouchService extends AccessibilityService {
             try {
                 windowManager.removeViewImmediate(floatingButton);
             } catch (Exception e) {
-                Log.w(TAG1, "Erro ao remover botão: " + e.getMessage());
+                Log.w(TAG, "Erro ao remover botão: " + e.getMessage());
             }
             floatingButton = null;
         }
+        paused = false;
     }
 
+    // ═══════════════════════════════════════════════════════════════
+    // Cleanup
+    // ═══════════════════════════════════════════════════════════════
+
+    private void cleanup() {
+        try {
+            LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);
+            lbm.unregisterReceiver(tapReceiver);
+            lbm.unregisterReceiver(captureReceiver);
+            lbm.unregisterReceiver(captureStopReceiver);
+            lbm.unregisterReceiver(matchReceiver);
+        } catch (Exception e) {
+            Log.w(TAG, "Erro no unregister: " + e.getMessage());
+        }
+        removeFloatingButton();
+        Log.i(TAG, "Cleanup completo.");
+    }
 }

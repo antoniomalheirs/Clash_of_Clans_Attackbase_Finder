@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.debug.open_clans.app-mergeDebugResources-35:/values-v23/values-v23.xml",
+            "outputFile": "com.debug.open_clans.app-mergeDebugResources-37:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Microsoft\\.gradle\\caches\\8.13\\transforms\\01707f44d0169c056f9c1f031ba45a57\\transformed\\appcompat-1.7.1\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Zeca\\.gradle\\caches\\8.13\\transforms\\01707f44d0169c056f9c1f031ba45a57\\transformed\\appcompat-1.7.1\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Microsoft\\.gradle\\caches\\8.13\\transforms\\824177f39ad976d1127cc30c00ad0307\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Zeca\\.gradle\\caches\\8.13\\transforms\\824177f39ad976d1127cc30c00ad0307\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Microsoft\\.gradle\\caches\\8.13\\transforms\\f41eb4eda382d5a7c5d33fc21a33061e\\transformed\\material-1.13.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Zeca\\.gradle\\caches\\8.13\\transforms\\f41eb4eda382d5a7c5d33fc21a33061e\\transformed\\material-1.13.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
