@@ -1,66 +1,110 @@
 [
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-hdpi/ic_launcher.png"
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_ic_count.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/ic_count.xml"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/xml_data_extraction_rules.xml.flat",
-        "source": "com.debug.open_clans.app-main-41:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.debug.open_clans.app-main-41:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.debug.open_clans.app-main-41:/drawable/ic_launcher_background.xml"
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_ic_gold.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/ic_gold.xml"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_bg_button_stop.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/bg_button_stop.xml"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/xml_accessibility_service_config.xml.flat",
-        "source": "com.debug.open_clans.app-main-41:/xml/accessibility_service_config.xml"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\xml_accessibility_service_config.xml.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\xml\\accessibility_service_config.xml"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/xml_backup_rules.xml.flat",
-        "source": "com.debug.open_clans.app-main-41:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.debug.open_clans.app-debug-39:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.debug.open_clans.app-main-41:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_bg_status.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/bg_status.xml"
+    },
+    {
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_bg_header_gradient.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/bg_header_gradient.xml"
+    },
+    {
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_bg_card.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_bg_button_start.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/bg_button_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_bg_input.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/bg_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_ic_dark_elixir.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/ic_dark_elixir.xml"
+    },
+    {
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-debug-39:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Zeca\\.gradle\\daemon\\8.13\\com.debug.open_clans.app-main-41:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "com.debug.open_clans.app-debug-39:/layout_activity_main.xml.flat",
         "source": "com.debug.open_clans.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.debug.open_clans.app-debug-39:/drawable_bg_floating_button.xml.flat",
+        "source": "com.debug.open_clans.app-main-41:/drawable/bg_floating_button.xml"
     }
 ]

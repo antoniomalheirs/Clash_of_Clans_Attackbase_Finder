@@ -1,8 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Open_Clans" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Material3 Color Tokens -->
+        <item name="colorPrimary">@color/accent_gold</item>
+        <item name="colorOnPrimary">@color/bg_dark</item>
+        <item name="colorPrimaryContainer">@color/accent_gold_dim</item>
+        <item name="colorSecondary">@color/accent_elixir</item>
+        <item name="colorTertiary">@color/accent_dark_elixir</item>
+        <item name="colorSurface">@color/bg_dark</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_card</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorError">@color/accent_red</item>
+
+        <!-- System Bars -->
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- EditText cursor / highlight -->
+        <item name="colorControlActivated">@color/accent_gold</item>
+        <item name="colorControlHighlight">@color/accent_gold_dim</item>
     </style>
 
     <style name="Theme.Open_Clans" parent="Base.Theme.Open_Clans" />

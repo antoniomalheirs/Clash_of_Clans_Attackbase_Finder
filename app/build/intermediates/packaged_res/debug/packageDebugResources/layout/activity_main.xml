@@ -2,8 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1A1A2E"
-    android:fillViewport="true">
+    android:background="@color/bg_dark"
+    android:fillViewport="true"
+    android:overScrollMode="never">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,226 +12,350 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="32dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="40dp"
         tools:context=".MainActivity">
 
-        <!-- Título -->
+        <!-- ═══ Header Section ═══ -->
+
+        <!-- App Name (small, uppercase, gold) -->
+        <TextView
+            android:id="@+id/labelAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:letterSpacing="0.15"
+            android:text="CLASH FINDER"
+            android:textColor="@color/accent_gold"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title -->
         <TextView
             android:id="@+id/textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:text="Open Clans"
-            android:textColor="#E0E0E0"
-            android:textSize="28sp"
+            android:layout_marginTop="4dp"
+            android:text="Buscar Base"
+            android:textColor="@color/text_primary"
+            android:textSize="32sp"
             android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelAppName" />
+
+        <!-- Gradient Accent Line -->
+        <View
+            android:id="@+id/gradientLine"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_header_gradient"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/textview" />
 
-        <!-- Status OCR -->
+        <!-- Status Pill -->
         <TextView
             android:id="@+id/statusText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:background="#22FFFFFF"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_status"
+            android:drawablePadding="8dp"
             android:gravity="center"
             android:minHeight="44dp"
-            android:paddingStart="16dp"
+            android:paddingStart="20dp"
             android:paddingTop="10dp"
-            android:paddingEnd="16dp"
+            android:paddingEnd="20dp"
             android:paddingBottom="10dp"
             android:text="Pronto para iniciar"
-            android:textColor="#B0B0B0"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview" />
-
-        <!-- ═══ Seção: Limiares de Recursos ═══ -->
-
-        <TextView
-            android:id="@+id/labelSection"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="24dp"
-            android:text="Limiares Mínimos"
-            android:textColor="#80CBC4"
+            android:textColor="@color/text_secondary"
             android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/statusText" />
-
-        <!-- Limiar Ouro/Elixir (Millions) -->
-        <TextView
-            android:id="@+id/labelThresholdMillion"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="12dp"
-            android:text="Ouro/Elixir mínimo"
-            android:textColor="#AAAAAA"
-            android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelSection" />
-
-        <EditText
-            android:id="@+id/inputThresholdMillion"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="28dp"
-            android:background="#33FFFFFF"
-            android:hint="1000000"
-            android:inputType="number"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text="1000000"
-            android:textColor="#E0E0E0"
-            android:textColorHint="#555555"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelThresholdMillion"
-            tools:ignore="HardcodedText,Autofill,LabelFor" />
+            app:layout_constraintTop_toBottomOf="@id/gradientLine" />
 
-        <!-- Limiar Dark Elixir (Ten Thousands) -->
-        <TextView
-            android:id="@+id/labelThresholdTenK"
+        <!-- ═══ Card 1: Limiares Mínimos ═══ -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardThresholds"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="12dp"
-            android:text="Dark Elixir mínimo"
-            android:textColor="#AAAAAA"
-            android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputThresholdMillion" />
-
-        <EditText
-            android:id="@+id/inputThresholdTenK"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="28dp"
-            android:background="#33FFFFFF"
-            android:hint="5000"
-            android:inputType="number"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text="5000"
-            android:textColor="#E0E0E0"
-            android:textColorHint="#555555"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelThresholdTenK"
-            tools:ignore="HardcodedText,Autofill,LabelFor" />
-
-        <!-- ═══ Seção: Contagens Mínimas ═══ -->
-
-        <TextView
-            android:id="@+id/labelSectionCounts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
             android:layout_marginTop="24dp"
-            android:text="Contagens Mínimas"
-            android:textColor="#80CBC4"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputThresholdTenK" />
-
-        <!-- Mín. recursos acima do limiar "million" -->
-        <TextView
-            android:id="@+id/labelMinMillionCount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="12dp"
-            android:text="Recursos acima do limiar Ouro/Elixir"
-            android:textColor="#AAAAAA"
-            android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelSectionCounts" />
-
-        <EditText
-            android:id="@+id/inputMinMillionCount"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="28dp"
-            android:background="#33FFFFFF"
-            android:hint="2"
-            android:inputType="number"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text="2"
-            android:textColor="#E0E0E0"
-            android:textColorHint="#555555"
-            android:textSize="16sp"
+            android:background="@drawable/bg_card"
+            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelMinMillionCount"
-            tools:ignore="HardcodedText,Autofill,LabelFor" />
+            app:layout_constraintTop_toBottomOf="@id/statusText">
 
-        <!-- Mín. recursos acima do limiar "ten thousand" -->
-        <TextView
-            android:id="@+id/labelMinTenKCount"
+            <!-- Section Title -->
+            <TextView
+                android:id="@+id/labelSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limiares Mínimos"
+                android:textColor="@color/accent_gold"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Divider under section title -->
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelSection" />
+
+            <!-- Ouro/Elixir label + icon -->
+            <ImageView
+                android:id="@+id/iconGold"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Gold"
+                android:src="@drawable/ic_gold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+            <TextView
+                android:id="@+id/labelThresholdMillion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Ouro / Elixir mínimo"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/iconGold"
+                app:layout_constraintStart_toEndOf="@id/iconGold"
+                app:layout_constraintTop_toTopOf="@id/iconGold" />
+
+            <EditText
+                android:id="@+id/inputThresholdMillion"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="1000000"
+                android:inputType="number"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="1000000"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconGold"
+                tools:ignore="HardcodedText,Autofill,LabelFor" />
+
+            <!-- Dark Elixir label + icon -->
+            <ImageView
+                android:id="@+id/iconDarkElixir"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Dark Elixir"
+                android:src="@drawable/ic_dark_elixir"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputThresholdMillion" />
+
+            <TextView
+                android:id="@+id/labelThresholdTenK"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Dark Elixir mínimo"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/iconDarkElixir"
+                app:layout_constraintStart_toEndOf="@id/iconDarkElixir"
+                app:layout_constraintTop_toTopOf="@id/iconDarkElixir" />
+
+            <EditText
+                android:id="@+id/inputThresholdTenK"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="5000"
+                android:inputType="number"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="5000"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconDarkElixir"
+                tools:ignore="HardcodedText,Autofill,LabelFor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ═══ Card 2: Contagens Mínimas ═══ -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardCounts"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="12dp"
-            android:text="Recursos acima do limiar Dark Elixir"
-            android:textColor="#AAAAAA"
-            android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputMinMillionCount" />
-
-        <EditText
-            android:id="@+id/inputMinTenKCount"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="28dp"
-            android:background="#33FFFFFF"
-            android:hint="1"
-            android:inputType="number"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text="1"
-            android:textColor="#E0E0E0"
-            android:textColorHint="#555555"
-            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelMinTenKCount"
-            tools:ignore="HardcodedText,Autofill,LabelFor" />
+            app:layout_constraintTop_toBottomOf="@id/cardThresholds">
 
-        <!-- ═══ Botão Start/Stop ═══ -->
+            <!-- Section Title -->
+            <TextView
+                android:id="@+id/labelSectionCounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contagens Mínimas"
+                android:textColor="@color/accent_gold"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Divider -->
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelSectionCounts" />
+
+            <!-- Resource count (million) -->
+            <ImageView
+                android:id="@+id/iconCount1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Count"
+                android:src="@drawable/ic_count"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <TextView
+                android:id="@+id/labelMinMillionCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Acima do limiar Ouro/Elixir"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/iconCount1"
+                app:layout_constraintStart_toEndOf="@id/iconCount1"
+                app:layout_constraintTop_toTopOf="@id/iconCount1" />
+
+            <EditText
+                android:id="@+id/inputMinMillionCount"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="2"
+                android:inputType="number"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="2"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconCount1"
+                tools:ignore="HardcodedText,Autofill,LabelFor" />
+
+            <!-- Resource count (ten thousand) -->
+            <ImageView
+                android:id="@+id/iconCount2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Count"
+                android:src="@drawable/ic_count"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputMinMillionCount" />
+
+            <TextView
+                android:id="@+id/labelMinTenKCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Acima do limiar Dark Elixir"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/iconCount2"
+                app:layout_constraintStart_toEndOf="@id/iconCount2"
+                app:layout_constraintTop_toTopOf="@id/iconCount2" />
+
+            <EditText
+                android:id="@+id/inputMinTenKCount"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="1"
+                android:inputType="number"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="1"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconCount2"
+                tools:ignore="HardcodedText,Autofill,LabelFor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ═══ Start/Stop Button ═══ -->
+
         <Button
             android:id="@+id/button"
-            android:layout_width="200dp"
+            android:layout_width="0dp"
             android:layout_height="56dp"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="#4CAF50"
-            android:text="Start"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_button_start"
+            android:elevation="4dp"
+            android:letterSpacing="0.05"
+            android:stateListAnimator="@null"
+            android:text="▶  Iniciar"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputMinTenKCount"
+            app:layout_constraintTop_toBottomOf="@id/cardCounts"
             tools:ignore="HardcodedText" />
+
+        <!-- Version watermark -->
+        <TextView
+            android:id="@+id/versionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="v1.0 • Debug Build"
+            android:textColor="@color/text_hint"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

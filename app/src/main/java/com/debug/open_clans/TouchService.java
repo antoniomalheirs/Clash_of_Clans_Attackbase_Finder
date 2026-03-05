@@ -81,7 +81,7 @@ public class TouchService extends AccessibilityService {
             paused = true;
             matchPaused = true;
             if (floatingButton instanceof Button) {
-                ((Button) floatingButton).setText("▶ Resume");
+                ((Button) floatingButton).setText("▶  Resume");
             }
         }
     };
@@ -172,10 +172,22 @@ public class TouchService extends AccessibilityService {
         params.y = 200;
 
         Button button = new Button(this);
-        button.setText("⏸ Pause");
+        button.setText("⏸  Pause");
+        button.setBackgroundResource(R.drawable.bg_floating_button);
+        button.setTextColor(0xFFFFD700); // accent_gold
+        button.setTextSize(13f);
+        button.setTypeface(null, android.graphics.Typeface.BOLD);
+        button.setAllCaps(false);
+        button.setMinWidth(0);
+        button.setMinHeight(0);
+        button.setMinimumWidth(0);
+        button.setMinimumHeight(0);
+        button.setPadding(32, 16, 32, 16);
+        button.setStateListAnimator(null);
+        button.setElevation(8f);
         button.setOnClickListener(v -> {
             paused = !paused;
-            button.setText(paused ? "▶ Resume" : "⏸ Pause");
+            button.setText(paused ? "▶  Resume" : "⏸  Pause");
             Log.i(TAG, "Paused = " + paused);
 
             // Se estava pausado por MATCH e o usuário clicou Resume → desbloquear match

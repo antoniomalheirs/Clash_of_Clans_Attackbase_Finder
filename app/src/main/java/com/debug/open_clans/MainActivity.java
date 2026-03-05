@@ -344,7 +344,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }, mHandler);
 
-        mImageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
+        mImageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 4);
         mImageReader.setOnImageAvailableListener(reader -> {
             Image image = null;
             try {
@@ -372,7 +372,8 @@ public class MainActivity extends AppCompatActivity {
         LocalBroadcastManager.getInstance(this)
                 .sendBroadcast(new Intent("CAPTURE_STARTED"));
 
-        mButtonToggle.setText("Stop");
+        mButtonToggle.setText("⏹  Parar");
+        mButtonToggle.setBackgroundResource(R.drawable.bg_button_stop);
         updateStatus("Captura ativa — analisando...");
     }
 
@@ -397,7 +398,8 @@ public class MainActivity extends AppCompatActivity {
             mMediaProjection = null;
         }
 
-        mButtonToggle.setText("Start");
+        mButtonToggle.setText("▶  Iniciar");
+        mButtonToggle.setBackgroundResource(R.drawable.bg_button_start);
         updateStatus("Captura parada.");
 
         LocalBroadcastManager.getInstance(this)
@@ -533,7 +535,7 @@ public class MainActivity extends AppCompatActivity {
 
         boolean conditionsMatch = countMillion >= minMillionCount &&
                 countTenThousand >= minTenThousandCount;
-        boolean validCount = (allValues.size() == EXPECTED_VALUE_COUNT);
+        boolean validCount = (allValues.size() >= EXPECTED_VALUE_COUNT);
 
         Log.d(TAG_OCR, "Totais: M=" + countMillion + " T=" + countTenThousand
                 + " Valores(" + allValues.size() + ")=" + allValues
@@ -812,7 +814,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateStatus(String message) {
         if (mStatusText != null) {
-            mHandler.post(() -> mStatusText.setText(message));
+            mHandler.post(() -> {
+                mStatusText.setText(message);
+                // Contextual status colors
+                if (message.contains("★") || message.contains("BASE BOA")) {
+                    mStatusText.setTextColor(getColor(R.color.accent_gold));
+                } else if (message.contains("Skip") || message.contains("Aguardando")) {
+                    mStatusText.setTextColor(getColor(R.color.text_hint));
+                } else if (message.contains("ativa") || message.contains("Buscando")) {
+                    mStatusText.setTextColor(getColor(R.color.accent_green));
+                } else if (message.contains("Erro")) {
+                    mStatusText.setTextColor(getColor(R.color.accent_red));
+                } else {
+                    mStatusText.setTextColor(getColor(R.color.text_secondary));
+                }
+            });
         }
     }
 

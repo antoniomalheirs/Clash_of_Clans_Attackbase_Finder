@@ -26,6 +26,11 @@ jobs:
       - name: Grant execute permission to gradlew
         run: chmod +x gradlew
 
+      - name: Remove duplicate webp icons (keep png only)
+        run: |
+          find app/src/main/res/mipmap-* -name "*.webp" -delete 2>/dev/null || true
+          find app/src/main/res/mipmap-anydpi* -name "*.xml" -delete 2>/dev/null || true
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
